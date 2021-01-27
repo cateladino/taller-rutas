@@ -52,14 +52,25 @@ Route::get('informacion', function(){
 
 // ******************** Punto 2**************************//
 Route::get('frameworks', function(){
-    $frameworks = [
+    $frameworks_backend = [
         'Laravel' => 'https://laravel.com/',
-        'Angular' => 'https://angular.io/',
-        'Ionic' => 'https://ionicframework.com/',
+        'CakePHP' => 'https://cakephp.org/',
         'Express' => 'https://expressjs.com/es/',
-        'React' => 'https://es.reactjs.org/',
-        'Spring Boot' => 'https://spring.io/projects/spring-boot'
+        'Spring Boot' => 'https://spring.io/projects/spring-boot',
+        'Django' => 'https://www.djangoproject.com/',
+        'Ruby on Rails' => 'https://rubyonrails.org/',
+        'Phoenix' => 'https://phoenixframework.org/'
     ];
 
-    return view('frameworks', ['frameworks' => $frameworks]);
+    $frameworks_frontend = [
+        'Angular' => 'https://angular.io/',
+        'Ionic' => 'https://ionicframework.com/',
+        'React' => 'https://es.reactjs.org/',
+        'Vue Js' => 'https://vuejs.org/',            
+    ];
+
+    return view('frameworks', [
+        'frameworks_backend' => $frameworks_backend,
+        'frameworks_frontend' => $frameworks_frontend
+    ]);
 });

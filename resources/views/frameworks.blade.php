@@ -7,15 +7,31 @@
     <title>Frameworks</title>
 </head>
 <body>
-    <table>
-        @foreach ($frameworks as $framework => $enlace)
-            <tr>
-                <th>{{ $framework }}</th>  
-                <th>
-                    <a target="_blank" href="{{ $enlace }}">Ir a la página</a>                    
-                </th>
-            </tr>
-        @endforeach
-    </table>
+    <div>
+        <h1>Frameworks Backend</h1>
+        <table>
+            @foreach ($frameworks_backend as $framework => $enlace)
+                <tr>
+                    <th>{{ $framework }}</th>  
+                    <th>
+                        <a target="_blank" href="{{ $enlace }}">Ir a la página</a>                    
+                    </th>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+    <div>
+        <h1>Frameworks Frontend</h1>
+        <table>
+            @foreach ($frameworks_frontend as $framework => $enlace)
+                <tr>
+                    <th>{{ $framework }}</th>  
+                    <th>
+                        <a target="_blank" href="{{ $enlace }}">Ir a la página</a>                    
+                    </th>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 </body>
 </html>
