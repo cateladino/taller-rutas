@@ -22,7 +22,7 @@ Route::get('/', function () {
 //  Forma #2
 Route::get('informacion', function(){
     $nombre = 'Caterine Ladino Galvis';
-    $cc = '1058847746';
+    $cc = '1053807299';
 
     return view('informacion')->width([
         'nombre' => $nombre,
@@ -33,7 +33,7 @@ Route::get('informacion', function(){
 // Forma #3
 Route::get('informacion', function(){
     $nombre = 'Caterine Ladino Galvis';
-    $cc = '1058847746';
+    $cc = '1053807299';
 
     return view('informacion', [
         'nombre' => $nombre,
@@ -44,9 +44,9 @@ Route::get('informacion', function(){
 // Forma #4
 Route::get('informacion', function(){
     $nombre = 'Caterine Ladino Galvis';
-    $cc = '1058847746';
+    $cc = '1053807299';
 
-    return view('informacion', compact());
+    return view('informacion', compact('nombre', 'cc'));
 });
 
 
